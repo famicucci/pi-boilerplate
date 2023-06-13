@@ -1,24 +1,15 @@
 import * as React from 'react';
 
 export interface ITextFieldProps {
-	value: string;
+	name: string;
 	type: string;
-	onChange: (value: string) => void;
 	placeholder?: string;
 }
 
 export default function TextField({
-	value,
-	onChange,
+	name,
 	type,
 	placeholder,
 }: ITextFieldProps) {
-	return (
-		<input
-			type={type}
-			placeholder={placeholder}
-			onChange={(e) => onChange(e.target.value)}
-			value={value}
-		/>
-	);
+	return <input name={name} type={type} placeholder={placeholder} />;
 }
