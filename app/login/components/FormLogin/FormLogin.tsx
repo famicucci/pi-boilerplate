@@ -14,7 +14,14 @@ export default function FormLogin() {
 				value=""
 				placeholder="Email"
 			/>
-			<input type="password" placeholder="Password" />
+			<TextField
+				type="password"
+				onChange={() => {
+					return console.log('hola contraseña');
+				}}
+				value=""
+				placeholder="Contraseña"
+			/>
 			<button type="submit">Login</button>
 		</form>
 	);
