@@ -8,6 +8,7 @@ import * as yup from 'yup';
 
 type FormValues = {
 	email: string;
+	password: string;
 };
 
 export const loginSchema = yup.object().shape({
@@ -15,10 +16,11 @@ export const loginSchema = yup.object().shape({
 		.string()
 		.email('Debe ser un email válido')
 		.required('El campo email es requerido'),
+	password: yup.string().required('El campo contraseña es requerido'),
 });
 
 export default function FormLogin() {
-	const defaultValues: object = { email: '' };
+	const defaultValues: FormValues = { email: '', password: '' };
 
 	const { handleSubmit, control } = useForm<FormValues>({
 		defaultValues,
@@ -28,7 +30,18 @@ export default function FormLogin() {
 
 	return (
 		<form className={styles.formInputs} onSubmit={handleSubmit(onSubmit)}>
-			<TextField control={control} name="email" placeholder="Email" />
+			<TextField
+				control={control}
+				type="text"
+				name="email"
+				placeholder="Email"
+			/>
+			<TextField
+				control={control}
+				type="password"
+				name="password"
+				placeholder="Contraseña"
+			/>
 			<button type="submit">Login</button>
 		</form>
 	);
