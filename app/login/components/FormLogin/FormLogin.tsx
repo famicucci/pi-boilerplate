@@ -5,21 +5,17 @@ import { TextField } from '@/components/inputs';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { loginSchema } from '../../validations';
-
-type FormValues = {
-	email: string;
-	password: string;
-};
+import { Login } from '../../models';
 
 export default function FormLogin() {
-	const defaultValues: FormValues = { email: '', password: '' };
+	const defaultValues: Login = { email: '', password: '' };
 
-	const { handleSubmit, control } = useForm<FormValues>({
+	const { handleSubmit, control } = useForm<Login>({
 		defaultValues,
 		resolver: yupResolver(loginSchema),
 	});
 
-	const onSubmit = (data: FormValues) => console.log(data);
+	const onSubmit = (data: Login) => console.log(data);
 
 	return (
 		<form className={styles.formInputs} onSubmit={handleSubmit(onSubmit)}>
