@@ -4,20 +4,12 @@ import styles from '../../styles/formLogin.module.css';
 import { TextField } from '@/components/inputs';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { loginSchema } from '../../validations';
 
 type FormValues = {
 	email: string;
 	password: string;
 };
-
-export const loginSchema = yup.object().shape({
-	email: yup
-		.string()
-		.email('Debe ser un email válido')
-		.required('El campo email es requerido'),
-	password: yup.string().required('El campo contraseña es requerido'),
-});
 
 export default function FormLogin() {
 	const defaultValues: FormValues = { email: '', password: '' };
@@ -26,6 +18,7 @@ export default function FormLogin() {
 		defaultValues,
 		resolver: yupResolver(loginSchema),
 	});
+
 	const onSubmit = (data: FormValues) => console.log(data);
 
 	return (
