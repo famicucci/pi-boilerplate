@@ -1,9 +1,11 @@
-.box {
-	width: 376px;
-	/* height: 10; */
-	/* border color */
-	/* border: 1px solid #fff; */
-	font-family: grapenuts;
+.container {
+	width: 300px;
+	margin-bottom: 16px;
+}
+
+.containerFullWidth {
+	width: 100%;
+	margin-bottom: 16px;
 }
 
 .input {
@@ -13,7 +15,6 @@
 	outline: none;
 	background: none;
 	color: #fff;
-	/* white border */
 	border-bottom: 1px solid #fff;
 
 	/* font-style: normal; */

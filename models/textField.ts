@@ -5,4 +5,5 @@ export interface TextField {
 	name: UseControllerProps<any>['name'];
 	type: string;
 	placeholder?: string;
+	fullWidth?: boolean;
 }

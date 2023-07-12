@@ -8,12 +8,13 @@ export default function TextField({
 	name,
 	placeholder,
 	type,
+	fullWidth,
 }: TextField) {
 	const { field, fieldState } = useController({ control, name });
 	const { error } = fieldState;
 
 	return (
-		<div className={styles.box}>
+		<div className={!fullWidth ? styles.container : styles.containerFullWidth}>
 			<input
 				{...field}
 				type={type}
