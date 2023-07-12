@@ -18,7 +18,7 @@ export default function FormLogin() {
 	const onSubmit = (data: Login) => console.log(data);
 
 	return (
-		<form className={styles.formInputs} onSubmit={handleSubmit(onSubmit)}>
+		<form onSubmit={handleSubmit(onSubmit)}>
 			<TextField
 				control={control}
 				type="text"
@@ -31,7 +31,9 @@ export default function FormLogin() {
 				name="password"
 				placeholder="Contraseña"
 			/>
-			<button type="submit">Login</button>
+			<button type="submit" className={styles.buttonSubmit}>
+				Login
+			</button>
 		</form>
 	);
 }
