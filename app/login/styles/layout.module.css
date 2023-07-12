@@ -1,7 +1,12 @@
-.main {
+.background {
 	background: #333;
+	background-image: url('../../../public/Finance\ analytics\ _Isometric\ 1.svg');
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.alignCenter {
 	height: 100vh;
-	/* vertical center */
 	display: flex;
 	justify-content: center;
 	align-items: center;
