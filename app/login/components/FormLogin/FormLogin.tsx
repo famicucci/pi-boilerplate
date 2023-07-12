@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { loginSchema } from '../../validations';
 import { Login } from '../../models';
 import { Button } from '@/components/Buttons';
+import styles from '../../styles/formLogin.module.css';
 
 export default function FormLogin() {
 	const defaultValues: Login = { email: '', password: '' };
@@ -18,7 +19,7 @@ export default function FormLogin() {
 	const onSubmit = (data: Login) => console.log(data);
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form onSubmit={handleSubmit(onSubmit)} className={styles.alignItemsCenter}>
 			<TextField
 				control={control}
 				type="text"

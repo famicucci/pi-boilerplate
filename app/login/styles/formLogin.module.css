@@ -1,22 +1,6 @@
-.buttonSubmit {
-	width: 376px;
-	height: 56px;
-	border-radius: 6px;
-	border: none;
-	background: #ffc000;
-	color: #fff;
-	font-size: 20px;
-	font-weight: 700;
-	cursor: pointer;
+.alignItemsCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-
-.buttonSubmit:hover {
-	transition: all 0.3s ease-in-out;
-	background: #ff8c00;
-}
-
-/* .formInputs {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 10px;
-} */
