@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import styles from '../../styles/formLogin.module.css';
 import { TextField } from '@/components/inputs';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { loginSchema } from '../../validations';
 import { Login } from '../../models';
+import { Button } from '@/components/Buttons';
 
 export default function FormLogin() {
 	const defaultValues: Login = { email: '', password: '' };
@@ -31,9 +31,9 @@ export default function FormLogin() {
 				name="password"
 				placeholder="Contraseña"
 			/>
-			<button type="submit" className={styles.buttonSubmit}>
+			<Button type="submit" color="primary">
 				Login
-			</button>
+			</Button>
 		</form>
 	);
 }
