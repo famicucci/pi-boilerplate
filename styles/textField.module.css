@@ -1,5 +1,5 @@
 .container {
-	width: 300px;
+	width: 252px;
 	margin-bottom: 16px;
 }
 
@@ -10,18 +10,18 @@
 
 .input {
 	width: 100%;
-	height: 54px;
+	height: 35px;
 	border: none;
 	outline: none;
 	background: none;
 	color: #fff;
-	border-bottom: 1px solid #fff;
+	border-bottom: 0.1px solid #fff;
+	font-size: 13.5px;
+	font-weight: 300;
+}
 
-	/* font-style: normal; */
-	/* font-weight: 300; */
-	/* line-height: 18px; */
-	font-size: 20px;
-	font-family: grapenuts;
+.input::placeholder {
+	color: #fff;
 }
 
 .error {
