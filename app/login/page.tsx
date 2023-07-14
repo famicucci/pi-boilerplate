@@ -5,7 +5,7 @@ import { FormLogin } from './components/FormLogin';
 function Login() {
 	return (
 		<Container>
-			<Logo />
+			<Logo top={25} />
 			<FormLogin />
 		</Container>
 	);
