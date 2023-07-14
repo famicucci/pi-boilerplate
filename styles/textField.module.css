@@ -8,6 +8,16 @@
 	margin-bottom: 16px;
 }
 
+.inputContainer {
+	border-bottom: 0.1px solid rgba(255, 255, 255, 1);
+
+	/* icon */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+}
+
 .input {
 	width: 100%;
 	height: 35px;
@@ -15,7 +25,6 @@
 	outline: none;
 	background: none;
 	color: #fff;
-	border-bottom: 0.1px solid #fff;
 	font-size: 13.5px;
 	font-weight: 300;
 }

@@ -8,6 +8,7 @@ export default function TextField({
 	name,
 	placeholder,
 	type,
+	icon,
 	fullWidth,
 }: TextField) {
 	const { field, fieldState } = useController({ control, name });
@@ -15,12 +16,15 @@ export default function TextField({
 
 	return (
 		<div className={!fullWidth ? styles.container : styles.containerFullWidth}>
-			<input
-				{...field}
-				type={type}
-				placeholder={placeholder}
-				className={styles.input}
-			/>
+			<div className={styles.inputContainer}>
+				<input
+					{...field}
+					type={type}
+					placeholder={placeholder}
+					className={styles.input}
+				/>
+				{icon && <>{icon}</>}
+			</div>
 			{error && <p>{error.message}</p>}
 		</div>
 	);

@@ -7,6 +7,7 @@ import { loginSchema } from '../../validations';
 import { Login } from '../../models';
 import { Button } from '@/components/Buttons';
 import styles from '../../styles/formLogin.module.css';
+import { Lock, Mail } from 'react-feather';
 
 export default function FormLogin() {
 	const defaultValues: Login = { email: '', password: '' };
@@ -25,12 +26,14 @@ export default function FormLogin() {
 				type="text"
 				name="email"
 				placeholder="Email"
+				icon={<Mail size={16} />}
 			/>
 			<TextField
 				control={control}
 				type="password"
 				name="password"
 				placeholder="Contraseña"
+				icon={<Lock size={16} />}
 			/>
 			<Button type="submit" color="primary">
 				Login
