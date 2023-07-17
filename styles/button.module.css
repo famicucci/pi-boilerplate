@@ -10,10 +10,10 @@
 
 .button:hover {
 	transition: all 0.3s ease-in-out;
-	background: #ff8c00;
+	background: var(--primary-hover-color);
 }
 
 .colorPrimary {
 	color: #fff;
-	background: #ffc000;
+	background: var(--primary-color);
 }
