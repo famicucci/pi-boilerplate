@@ -25,7 +25,7 @@ export default function TextField({
 				/>
 				{icon && <>{icon}</>}
 			</div>
-			{error && <p>{error.message}</p>}
+			{error && <p className={styles.errorMessage}>{error.message}</p>}
 		</div>
 	);
 }
