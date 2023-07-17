@@ -35,7 +35,7 @@ export default function FormLogin() {
 				placeholder="Contraseña"
 				icon={<Lock size={16} />}
 			/>
-			<Button type="submit" color="primary">
+			<Button type="submit" color="primary" className={styles.marginButton}>
 				Login
 			</Button>
 		</form>
