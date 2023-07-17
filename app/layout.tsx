@@ -1,5 +1,5 @@
 import './globals.css';
-import './colors.css';
+import './variables.css';
 import '../styles/fonts.css';
 
 export const metadata = {
