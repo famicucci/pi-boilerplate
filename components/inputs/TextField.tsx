@@ -16,7 +16,11 @@ export default function TextField({
 
 	return (
 		<div className={!fullWidth ? styles.container : styles.containerFullWidth}>
-			<div className={styles.inputContainer}>
+			<div
+				className={`${styles.inputContainer} ${
+					!error && styles.spaceErrorMessage
+				}`}
+			>
 				<input
 					{...field}
 					type={type}

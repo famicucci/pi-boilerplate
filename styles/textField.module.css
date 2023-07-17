@@ -1,11 +1,9 @@
 .container {
 	width: 252px;
-	margin-bottom: 16px;
 }
 
 .containerFullWidth {
 	width: 100%;
-	margin-bottom: 16px;
 }
 
 .inputContainer {
@@ -16,6 +14,10 @@
 	align-items: center;
 	justify-content: space-between;
 	color: #fff;
+}
+
+.spaceErrorMessage {
+	margin-bottom: calc(var(--base-spacing) * 2);
 }
 
 .input {
