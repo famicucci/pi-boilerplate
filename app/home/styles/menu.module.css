@@ -1,0 +1,47 @@
+/* Styles for side menu */
+.sideMenu {
+	width: 250px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #333;
+	padding-top: 60px;
+	transition: left 0.3s;
+}
+
+.menuLinks {
+	list-style: none;
+	padding: 0;
+}
+
+.menuLinks li {
+	margin-bottom: 10px;
+}
+
+.menuLinks a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	display: block;
+}
+
+.closeBtn {
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+/* Styles for content */
+.content {
+	margin-left: 0;
+	transition: margin-left 0.3s;
+}
+
+.sideMenuActive {
+	left: 0;
+}
+
+.contentMenuActive {
+	margin-left: 250px;
+}
