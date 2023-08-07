@@ -1,11 +1,5 @@
-import { Menu } from './components/Menu';
-
 function Home() {
-	return (
-		<div>
-			<Menu />
-		</div>
-	);
+	return <div>Este es el contenido de la página de inicio</div>;
 }
 
 export default Home;
