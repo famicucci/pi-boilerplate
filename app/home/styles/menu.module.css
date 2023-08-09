@@ -1,4 +1,18 @@
 /* Styles for side menu */
+.containerLogoMenuActive {
+	margin-left: 104px;
+	cursor: pointer;
+}
+
+.containerLogoMenuInActive {
+	margin-left: 202px;
+	cursor: pointer;
+}
+
+.containerLogo {
+	transition: margin-left 0.3s;
+}
+
 .sideMenu {
 	width: 250px;
 	height: 100vh;
@@ -6,7 +20,7 @@
 	top: 0;
 	left: -200px;
 	background-color: #333;
-	padding-top: 60px;
+	padding-top: 40px;
 	transition: left 0.3s;
 }
 

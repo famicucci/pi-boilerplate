@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './styles/menu.module.css';
+import { LogoMini } from '@/components/Logo';
 
 export interface IAppLayoutProps {
 	children: React.ReactNode;
@@ -15,6 +16,18 @@ export default function AppLayout(props: IAppLayoutProps) {
 				className={`${styles.sideMenu} ${active && styles.sideMenuActive}`}
 				id="side-menu"
 			>
+				<div
+					onClick={() => {
+						setActive(!active);
+					}}
+					className={`${styles.containerLogo} ${
+						active
+							? styles.containerLogoMenuActive
+							: styles.containerLogoMenuInActive
+					}`}
+				>
+					<LogoMini />
+				</div>
 				<button
 					className={styles.closeBtn}
 					id="close-btn"
