@@ -46,16 +46,6 @@
 	text-decoration: none;
 }
 
-/* Styles for content */
-.content {
-	margin-left: 50px;
-	transition: margin-left 0.3s;
-}
-
 .sideMenuActive {
 	left: 0;
-}
-
-.contentMenuActive {
-	margin-left: 250px;
 }

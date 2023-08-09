@@ -1,0 +1,9 @@
+/* Styles for content */
+.content {
+	margin-left: 50px;
+	transition: margin-left 0.3s;
+}
+
+.contentMenuActive {
+	margin-left: 250px;
+}
