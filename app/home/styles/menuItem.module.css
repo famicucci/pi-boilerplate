@@ -1,0 +1,25 @@
+.container {
+	margin-bottom: 10px;
+}
+
+.container:hover {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 192, 0, 1) 0%,
+		rgba(255, 192, 0, 0.5052) 50%,
+		rgba(255, 192, 0, 0.5052) 50%,
+		rgba(255, 192, 0, 0) 100%
+	);
+}
+
+.container a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	display: block;
+}
+
+.text {
+	margin-left: 15px;
+	font-size: 1rem;
+}

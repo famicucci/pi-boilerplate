@@ -1,6 +1,6 @@
 import { LogoMini } from '@/components/Logo';
-import * as React from 'react';
 import styles from '../../styles/menu.module.css';
+import { ListItems } from './ListItems';
 
 export interface IMenuProps {
 	active: boolean;
@@ -27,23 +27,7 @@ export default function Menu(props: IMenuProps) {
 			>
 				<LogoMini />
 			</div>
-			<ul className={styles.menuLinks}>
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">About</a>
-				</li>
-				<li>
-					<a href="#">Services</a>
-				</li>
-				<li>
-					<a href="#">Portfolio</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-			</ul>
+			<ListItems />
 		</div>
 	);
 }

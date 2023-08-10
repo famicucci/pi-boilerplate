@@ -24,22 +24,6 @@
 	transition: left 0.3s;
 }
 
-.menuLinks {
-	list-style: none;
-	padding: 0;
-}
-
-.menuLinks li {
-	margin-bottom: 10px;
-}
-
-.menuLinks a {
-	color: white;
-	text-decoration: none;
-	padding: 10px 20px;
-	display: block;
-}
-
 .closeBtn {
 	color: white;
 	font-size: 24px;
