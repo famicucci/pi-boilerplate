@@ -33,3 +33,10 @@
 .sideMenuActive {
 	left: 0;
 }
+
+.containerLogoText {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: calc(var(--base-spacing) * 2);
+}

@@ -1,6 +1,7 @@
 import { LogoMini } from '@/components/Logo';
 import styles from '../../styles/menu.module.css';
 import { ListItems } from './ListItems';
+import LogoText from './LogoText';
 
 export interface IMenuProps {
 	active: boolean;
@@ -27,6 +28,11 @@ export default function Menu(props: IMenuProps) {
 			>
 				<LogoMini />
 			</div>
+			{active && (
+				<div className={styles.containerLogoText}>
+					<LogoText />
+				</div>
+			)}
 			<ListItems />
 		</div>
 	);
