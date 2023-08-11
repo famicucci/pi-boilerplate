@@ -28,12 +28,14 @@ export default function Menu(props: IMenuProps) {
 			>
 				<LogoMini />
 			</div>
-			{active && (
-				<div className={styles.containerLogoText}>
-					<LogoText />
-				</div>
-			)}
-			<ListItems />
+			<div
+				className={`${styles.containerLogoText} ${
+					!active && styles.containerLogoTextMenuInactive
+				}`}
+			>
+				<LogoText />
+			</div>
+			<ListItems active={active} />
 		</div>
 	);
 }

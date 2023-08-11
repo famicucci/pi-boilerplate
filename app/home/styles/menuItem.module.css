@@ -1,5 +1,14 @@
 .container {
 	margin-bottom: 10px;
+	transition: margin-left 0.3s;
+}
+
+.containerMenuActive {
+	margin-left: 0;
+}
+
+.containerMenuInactive {
+	margin-left: 195px;
 }
 
 .container:hover {
@@ -17,9 +26,19 @@
 	text-decoration: none;
 	padding: 10px 20px;
 	display: block;
+	margin-left: 0;
 }
 
 .text {
 	margin-left: 15px;
 	font-size: 1rem;
+	transition: display 0.3s ease-out;
+}
+
+.textMenuActive {
+	display: inline;
+}
+
+.textMenuInactive {
+	display: none;
 }
