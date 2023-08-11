@@ -36,5 +36,5 @@
 }
 
 .containerLogoTextMenuInactive {
-	display: none;
+	visibility: hidden;
 }
