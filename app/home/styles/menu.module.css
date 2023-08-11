@@ -24,12 +24,6 @@
 	transition: left 0.3s;
 }
 
-.closeBtn {
-	color: white;
-	font-size: 24px;
-	text-decoration: none;
-}
-
 .sideMenuActive {
 	left: 0;
 }
