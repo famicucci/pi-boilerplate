@@ -1,9 +1,21 @@
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../../styles/menuItem.module.css';
 import { MenuItemProps } from '../../models';
 
 export default function MenuItem(props: MenuItemProps) {
 	const { icon, text, href, active } = props;
+
+	const [apearText, setApearText] = useState<boolean>(true);
+
+	useEffect(() => {
+		if (active) {
+			setTimeout(() => {
+				setApearText(true);
+			}, 70);
+		} else {
+			setApearText(false);
+		}
+	}, [active]);
 
 	return (
 		<li
@@ -14,8 +26,8 @@ export default function MenuItem(props: MenuItemProps) {
 			<a href={`${href}`}>
 				{icon}
 				<span
-					className={`${styles.text} ${
-						!active ? styles.textMenuInactive : styles.textMenuActive
+					className={`${styles.text} ${!active && styles.textMenuInactive} ${
+						apearText && styles.textMenuActive
 					}`}
 				>
 					{text}
