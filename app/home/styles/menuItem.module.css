@@ -11,7 +11,7 @@
 	margin-left: 195px;
 }
 
-.container:hover {
+.containerMenuActive:hover {
 	background: linear-gradient(
 		90deg,
 		rgba(255, 192, 0, 1) 0%,
@@ -21,8 +21,12 @@
 	);
 }
 
+.containerMenuInactive a:hover {
+	color: rgba(255, 192, 0, 1);
+}
+
 .container a {
-	color: white;
+	color: #fff;
 	text-decoration: none;
 	padding: 10px 20px;
 	display: block;
