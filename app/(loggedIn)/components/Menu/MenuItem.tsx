@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../../styles/menuItem.module.css';
 import { MenuItemProps } from '../../models';
+import Link from 'next/link';
 
 export default function MenuItem(props: MenuItemProps) {
 	const { icon, text, href, active } = props;
@@ -23,7 +24,7 @@ export default function MenuItem(props: MenuItemProps) {
 				!active ? styles.containerMenuInactive : styles.containerMenuActive
 			}`}
 		>
-			<a href={`${href}`}>
+			<Link href={`${href}`}>
 				{icon}
 				<span
 					className={`${styles.text} ${!active && styles.textMenuInactive} ${
@@ -32,7 +33,7 @@ export default function MenuItem(props: MenuItemProps) {
 				>
 					{text}
 				</span>
-			</a>
+			</Link>
 		</li>
 	);
 }
