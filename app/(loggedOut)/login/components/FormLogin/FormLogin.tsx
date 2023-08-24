@@ -8,8 +8,10 @@ import { Login } from '../../models';
 import { Button } from '@/components/Buttons';
 import styles from '../../styles/formLogin.module.css';
 import { Lock, Mail } from 'react-feather';
+import { useRouter } from 'next/navigation';
 
 export default function FormLogin() {
+	const router = useRouter();
 	const defaultValues: Login = { email: '', password: '' };
 
 	const { handleSubmit, control } = useForm<Login>({
@@ -17,7 +19,10 @@ export default function FormLogin() {
 		resolver: yupResolver(loginSchema),
 	});
 
-	const onSubmit = (data: Login) => console.log(data);
+	const onSubmit = (data: Login) => {
+		console.log(data);
+		router.push('/home');
+	};
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.alignItemsCenter}>
