@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './styles/layout.module.css';
-import { Menu } from './home/components/Menu';
+import { Menu } from './components/Menu';
 
 export interface IAppLayoutProps {
 	children: React.ReactNode;

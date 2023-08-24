@@ -1,4 +1,4 @@
-import { HelpCircle, Home, Settings, User, Users } from 'react-feather';
+import { HelpCircle, Home, Settings } from 'react-feather';
 import { MenuItems } from '../models';
 
 const menuItems: MenuItems = [
