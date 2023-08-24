@@ -9,6 +9,7 @@ import { Button } from '@/components/Buttons';
 import styles from '../../styles/formLogin.module.css';
 import { Lock, Mail } from 'react-feather';
 import { useRouter } from 'next/navigation';
+import backApi from '@/api/config';
 
 export default function FormLogin() {
 	const router = useRouter();
@@ -19,9 +20,21 @@ export default function FormLogin() {
 		resolver: yupResolver(loginSchema),
 	});
 
-	const onSubmit = (data: Login) => {
-		console.log(data);
-		router.push('/home');
+	const onSubmit = async (data: Login) => {
+		// console.log(data);
+		// envia los datos al servidor
+		try {
+			const response = await backApi.get('/login');
+			console.log(response.data);
+		} catch (error) {
+			console.log(error);
+		}
+
+		// el servidor checkea los datos
+		// si los datos son correctos, el servidor devuelve un token
+		// el cliente guarda el token en el localstorage
+		// el cliente redirige a la pagina de home
+		// router.push('/home');
 	};
 
 	return (
