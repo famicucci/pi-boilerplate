@@ -2,13 +2,9 @@ import { LogoMini } from '@/components/Logo';
 import styles from '../../styles/menu.module.css';
 import { ListItems } from './ListItems';
 import LogoText from './LogoText';
+import { MenuProps } from '../../models/menuProps';
 
-export interface IMenuProps {
-	active: boolean;
-	setActive: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export default function Menu(props: IMenuProps) {
+export default function Menu(props: MenuProps) {
 	const { active, setActive } = props;
 
 	return (
