@@ -14,7 +14,7 @@ export function ListItems(props: ListItemsProps) {
 					key={item.text}
 					icon={item.icon}
 					text={item.text}
-					href="#"
+					href={item.href}
 					active={active}
 				/>
 			))}

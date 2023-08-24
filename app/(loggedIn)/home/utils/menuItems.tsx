@@ -4,28 +4,18 @@ import { MenuItems } from '../models';
 const menuItems: MenuItems = [
 	{
 		icon: <Home size={17} />,
-		text: 'Home',
-		href: '#',
-	},
-	{
-		icon: <Users size={17} />,
-		text: 'Users',
-		href: '#',
-	},
-	{
-		icon: <User size={17} />,
-		text: 'Profile',
-		href: '#',
+		text: 'Components',
+		href: '/home',
 	},
 	{
 		icon: <Settings size={17} />,
 		text: 'Settings',
-		href: '#',
+		href: '/settings',
 	},
 	{
 		icon: <HelpCircle size={17} />,
 		text: 'Help',
-		href: '#',
+		href: '/help',
 	},
 ];
 
