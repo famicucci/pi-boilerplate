@@ -10,9 +10,12 @@ import styles from '../../styles/formLogin.module.css';
 import { Lock, Mail } from 'react-feather';
 import { useRouter } from 'next/navigation';
 import backApi from '@/api/config';
+import useFetchAndLoad from '@/hooks/useFetchAndLoad';
+import loginRequest from '@/services/loginRequest';
 
 export default function FormLogin() {
 	const router = useRouter();
+	const { callEndpoint } = useFetchAndLoad();
 	const defaultValues: Login = { email: '', password: '' };
 
 	const { handleSubmit, control } = useForm<Login>({
@@ -24,8 +27,8 @@ export default function FormLogin() {
 		// console.log(data);
 		// envia los datos al servidor
 		try {
-			const response = await backApi.get('/login');
-			console.log(response.data);
+			const response = await callEndpoint(loginRequest(data));
+			console.log(response);
 		} catch (error) {
 			console.log(error);
 		}
