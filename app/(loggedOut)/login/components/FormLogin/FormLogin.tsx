@@ -9,11 +9,15 @@ import { Button } from '@/components/Buttons';
 import styles from '../../styles/formLogin.module.css';
 import { Lock, Mail } from 'react-feather';
 import { useRouter } from 'next/navigation';
-import backApi from '@/api/config';
 import useFetchAndLoad from '@/hooks/useFetchAndLoad';
 import loginRequest from '@/services/loginRequest';
+import { useSelector, useDispatch } from 'react-redux';
+import { handleLogin } from '@/redux/authentication';
 
 export default function FormLogin() {
+	const dispatch = useDispatch();
+	// const auth = useSelector((state) => state.auth);
+	// console.log(auth);
 	const router = useRouter();
 	const { callEndpoint } = useFetchAndLoad();
 	const defaultValues: Login = { email: '', password: '' };
@@ -27,17 +31,16 @@ export default function FormLogin() {
 		// console.log(data);
 		// envia los datos al servidor
 		try {
+			// el servidor checkea los datos
 			const response = await callEndpoint(loginRequest(data));
-			console.log(response);
+			// si los datos son correctos, el servidor devuelve un token
+			// el cliente guarda el token en el localstorage
+			dispatch(handleLogin(response.data));
+			// el cliente redirige a la pagina de home
+			// router.push('/home');
 		} catch (error) {
 			console.log(error);
 		}
-
-		// el servidor checkea los datos
-		// si los datos son correctos, el servidor devuelve un token
-		// el cliente guarda el token en el localstorage
-		// el cliente redirige a la pagina de home
-		// router.push('/home');
 	};
 
 	return (

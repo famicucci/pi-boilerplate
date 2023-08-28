@@ -1,6 +1,9 @@
+'use client';
 import './globals.css';
 import './variables.css';
 import '../styles/fonts.css';
+import { Provider } from 'react-redux';
+import { store } from '@/redux/store';
 
 export const metadata = {
 	title: 'Next.js',
@@ -14,7 +17,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<Provider store={store}>{children}</Provider>
+			</body>
 		</html>
 	);
 }
