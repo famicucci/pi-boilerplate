@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-console.log(process.env.NEXT_PUBLIC_BACKAPI_URL);
 const backApi = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_BACKAPI_URL,
 	headers: {
