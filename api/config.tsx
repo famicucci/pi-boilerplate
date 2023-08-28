@@ -11,4 +11,17 @@ const backApi = axios.create({
 	},
 });
 
+backApi.interceptors.request.use(
+	(config) => {
+		const userData = window.localStorage.getItem('userData');
+		const accessToken = userData.token;
+
+		if (accessToken) {
+			config.headers.Authorization = `Bearer ${JSON.parse(accessToken)}`;
+		}
+		return config;
+	},
+	(error) => Promise.reject(error)
+);
+
 export default backApi;
