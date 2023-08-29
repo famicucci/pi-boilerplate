@@ -1,45 +1,16 @@
 'use client';
 import React from 'react';
 import { TextField } from '@/components/inputs';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { loginSchema } from '../../validations';
-import { Login } from '../../models';
 import { Button } from '@/components/Buttons';
 import styles from '../../styles/formLogin.module.css';
 import { Lock, Mail } from 'react-feather';
-import { useRouter } from 'next/navigation';
-import useFetchAndLoad from '@/hooks/useFetchAndLoad';
-import loginRequest from '@/services/loginRequest';
-import { useSelector, useDispatch } from 'react-redux';
-import { handleLogin } from '@/redux/authentication';
-import { getLoginAdapter, loginAdapter } from '@/adapters';
+import { FormLoginProps } from '../../models/formLoginProps';
 
-export default function FormLogin() {
-	const dispatch = useDispatch();
-	// const auth = useSelector((state) => state.auth);
-	// console.log(auth);
-	const router = useRouter();
-	const { callEndpoint } = useFetchAndLoad();
-	const defaultValues: Login = { email: '', password: '' };
-
-	const { handleSubmit, control } = useForm<Login>({
-		defaultValues,
-		resolver: yupResolver(loginSchema),
-	});
-
-	const onSubmit = async (data: Login) => {
-		try {
-			const response = await callEndpoint(loginRequest(loginAdapter(data)));
-			dispatch(handleLogin(getLoginAdapter(response.data)));
-			router.push('/home');
-		} catch (error) {
-			console.log(error);
-		}
-	};
+export default function FormLogin(props: FormLoginProps) {
+	const { onSubmit, control } = props;
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className={styles.alignItemsCenter}>
+		<form onSubmit={onSubmit} className={styles.alignItemsCenter}>
 			<TextField
 				control={control}
 				type="text"
