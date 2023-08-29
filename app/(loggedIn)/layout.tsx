@@ -13,7 +13,7 @@ export default function AppLayout(props: IAppLayoutProps) {
 	const auth = useSelector((state) => state.auth);
 	const [active, setActive] = useState(true);
 
-	if (!auth.userData.token) {
+	if (!auth.userData.accessToken) {
 		return redirect('/login');
 	}
 

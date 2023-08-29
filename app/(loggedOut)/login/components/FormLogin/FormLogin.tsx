@@ -28,16 +28,10 @@ export default function FormLogin() {
 	});
 
 	const onSubmit = async (data: Login) => {
-		// console.log(data);
-		// envia los datos al servidor
 		try {
-			// el servidor checkea los datos
 			const response = await callEndpoint(loginRequest(data));
-			// si los datos son correctos, el servidor devuelve un token
-			// el cliente guarda el token en el localstorage
 			dispatch(handleLogin(response.data));
-			// el cliente redirige a la pagina de home
-			// router.push('/home');
+			router.push('/home');
 		} catch (error) {
 			console.log(error);
 		}

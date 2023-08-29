@@ -13,15 +13,21 @@ const backApi = axios.create({
 
 backApi.interceptors.request.use(
 	(config) => {
-		const userData = window.localStorage.getItem('userData');
-		const accessToken = userData.token;
+		// const userData = window.localStorage.getItem('userData');
+		// const accessToken = userData.token;
 
-		if (accessToken) {
-			config.headers.Authorization = `Bearer ${JSON.parse(accessToken)}`;
-		}
+		// if (accessToken) {
+		// 	config.headers.Authorization = `Bearer ${JSON.parse(accessToken)}`;
+		// }
 		return config;
 	},
 	(error) => Promise.reject(error)
+);
+
+backApi.interceptors.response.use(
+	(response) => response,
+	(error) =>
+		Promise.reject({ status: error.response.status, data: error.response.data })
 );
 
 export default backApi;
