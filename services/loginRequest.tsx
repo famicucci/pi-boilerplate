@@ -1,7 +1,7 @@
 import backApi from '@/api/config';
 
-const loginRequest = (data: object) => {
-	return { call: backApi.get('/login') };
+const loginRequest = (data) => {
+	return { call: backApi.get('/login', data) };
 };
 
 export default loginRequest;
