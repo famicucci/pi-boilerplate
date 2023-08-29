@@ -13,7 +13,7 @@ import useFetchAndLoad from '@/hooks/useFetchAndLoad';
 import loginRequest from '@/services/loginRequest';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleLogin } from '@/redux/authentication';
-import { loginAdapter } from '@/adapters';
+import { getLoginAdapter, loginAdapter } from '@/adapters';
 
 export default function FormLogin() {
 	const dispatch = useDispatch();
@@ -31,7 +31,7 @@ export default function FormLogin() {
 	const onSubmit = async (data: Login) => {
 		try {
 			const response = await callEndpoint(loginRequest(loginAdapter(data)));
-			dispatch(handleLogin(response.data));
+			dispatch(handleLogin(getLoginAdapter(response.data)));
 			router.push('/home');
 		} catch (error) {
 			console.log(error);
