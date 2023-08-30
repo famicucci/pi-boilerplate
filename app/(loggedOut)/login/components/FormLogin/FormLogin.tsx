@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { TextField } from '@/components/inputs';
+import { TextField } from '@/components/TextField';
 import { Button } from '@/components/Button';
 import styles from '../../styles/formLogin.module.css';
 import { Lock, Mail } from 'react-feather';
