@@ -1,5 +1,11 @@
+import { TableExample } from './components/TableExample';
+
 function Home() {
-	return <div>Este es el contenido de la página de inicio</div>;
+	return (
+		<div>
+			<TableExample />
+		</div>
+	);
 }
 
 export default Home;
