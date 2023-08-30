@@ -1,7 +1,7 @@
 .button {
 	width: 252px;
 	height: 37px;
-	border-radius: 4px;
+	border-radius: var(--regular-radius);
 	border: none;
 	font-size: var(--regular-font-size);
 	font-weight: 700;
