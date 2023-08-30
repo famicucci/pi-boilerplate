@@ -1,0 +1,6 @@
+.card {
+	margin: calc(var(--base-spacing) * 3);
+	padding: var(--base-spacing);
+	box-shadow: 6px 10px 20px 0px rgba(0, 0, 0, 0.22);
+	border-radius: var(--regular-radius);
+}
