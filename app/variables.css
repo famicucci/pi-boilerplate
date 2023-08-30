@@ -1,6 +1,8 @@
 :root {
 	--primary-color: #ffc000;
 	--primary-hover-color: #ff8c00;
+	--secondary-color: #00ff95;
+	--secondary-hover-color: #13c77c;
 	--regular-font-size: 0.84rem;
 	--base-spacing: 8px;
 	--regular-radius: 10px;

@@ -10,10 +10,22 @@
 
 .button:hover {
 	transition: all 0.3s ease-in-out;
-	background: var(--primary-hover-color);
 }
 
 .colorPrimary {
 	color: #fff;
 	background: var(--primary-color);
+}
+
+.colorPrimary:hover {
+	background: var(--primary-hover-color);
+}
+
+.colorSecondary {
+	color: #fff;
+	background: var(--secondary-color);
+}
+
+.colorSecondary:hover {
+	background: var(--secondary-hover-color);
 }

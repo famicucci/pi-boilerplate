@@ -8,7 +8,7 @@ const Button = ({ color, type, children, className }: Button & Children) => {
 			type={type === 'submit' ? 'submit' : 'button'}
 			className={`${className} ${styles.button} ${
 				color === 'primary' ? styles.colorPrimary : ''
-			}`}
+			} ${color === 'secondary' ? styles.colorSecondary : ''}`}
 		>
 			{children}
 		</button>
