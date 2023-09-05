@@ -1,8 +1,40 @@
+// 'use client';
 import * as React from 'react';
 import { Table } from '@/app/(loggedIn)/components/Table';
 import { TableExampleData } from '../../models/tableExampleData';
+import { useDispatch } from 'react-redux';
+import useFetchAndLoad from '@/hooks/useFetchAndLoad';
+import { getUsersRequest } from '../../services';
 
-export function TableExample() {
+async function getData() {
+	const res = await fetch('http://localhost:4000/api/users');
+	// The return value is *not* serialized
+	// You can return Date, Map, Set, etc.
+
+	if (!res.ok) {
+		// This will activate the closest `error.js` Error Boundary
+		console.log(res);
+		throw Error('Esto es una prueba del manejo del mensaje');
+	}
+
+	return res.json();
+}
+
+export async function TableExample() {
+	// const dispatch = useDispatch();
+	const { callEndpoint } = useFetchAndLoad();
+
+	const data = await getData();
+	// const data = await callEndpoint(getUsersRequest());
+	console.log(data);
+	// try {
+	// 	const response = await callEndpoint(getUsersRequest());
+	// 	console.log(response);
+	// 	// dispatch(handleLogin(getLoginAdapter(response.data)));
+	// } catch (error) {
+	// 	console.log(error);
+	// }
+
 	const columns = [
 		{
 			name: 'Nombre',
@@ -39,5 +71,5 @@ export function TableExample() {
 		{ id: 2, name: 'Carl', age: 29, city: 'Texas' },
 	];
 
-	return <Table columns={columns} data={currentData} />;
+	return <Table columns={columns} data={data} />;
 }
