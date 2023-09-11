@@ -1,7 +1,11 @@
-import backApi from '@/api/config';
+async function getUsersRequest() {
+	const res = await fetch('http://localhost:4000/api/users');
 
-const getUsersRequest = () => {
-	return { call: backApi.get('/users') };
-};
+	if (!res.ok) {
+		throw Error('Hubo un error al traer los usuarios');
+	}
+
+	return res.json();
+}
 
 export default getUsersRequest;
