@@ -2,7 +2,13 @@ import { Button, Children } from '@/models';
 import * as React from 'react';
 import styles from '../../styles/button.module.css';
 
-const Button = ({ color, type, children, className }: Button & Children) => {
+const Button = ({
+	color,
+	type,
+	children,
+	className,
+	onClick,
+}: Button & Children) => {
 	const colors: {
 		primary: string;
 		secondary: string;
@@ -17,6 +23,7 @@ const Button = ({ color, type, children, className }: Button & Children) => {
 		<button
 			type={type === 'submit' ? 'submit' : 'button'}
 			className={`${className} ${styles.button} ${colors[color]}`}
+			onClick={onClick}
 		>
 			{children}
 		</button>
