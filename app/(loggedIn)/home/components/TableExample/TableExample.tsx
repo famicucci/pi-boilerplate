@@ -1,7 +1,6 @@
 // 'use client';
 import * as React from 'react';
 import { Table } from '@/app/(loggedIn)/components/Table';
-import { TableExampleData } from '../../models/tableExampleData';
 import { getUsersRequest } from '../../services';
 
 export async function TableExample() {
