@@ -3,7 +3,7 @@ import { ButtonPrimary } from './components/Buttons/ButtonPrimary';
 import { TableExample } from './components/TableExample';
 import { ButtonSecondary } from './components/Buttons/ButtonSecondary';
 import { Suspense } from 'react';
-import { Skeleton } from '@/components/Skeleton';
+import { SkeletonTable } from '@/components/Skeleton';
 
 function Home() {
 	return (
@@ -13,7 +13,7 @@ function Home() {
 				<ButtonSecondary />
 			</Card>
 			<Card>
-				<Suspense fallback={<Skeleton />}>
+				<Suspense fallback={<SkeletonTable />}>
 					<TableExample />
 				</Suspense>
 			</Card>
