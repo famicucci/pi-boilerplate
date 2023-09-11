@@ -11,6 +11,8 @@
 	margin-bottom: var(--base-spacing);
 	width: 100%;
 	border-radius: var(--regular-radius);
+	opacity: 0;
+	animation: fadeIn 2s ease-in-out infinite;
 }
 
 .skeletonLine {
@@ -19,4 +21,16 @@
 	margin-bottom: var(--base-spacing);
 	width: 100%;
 	border-radius: var(--regular-radius);
+	opacity: 0;
+	animation: fadeIn 2s ease-in infinite;
+}
+
+@keyframes fadeIn {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
 }
