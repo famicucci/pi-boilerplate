@@ -2,17 +2,20 @@
 import { Button } from '@/components/Button';
 import * as React from 'react';
 import styles from '../../styles/buttonAddUser.module.css';
+import { createUserRequest } from '../../services';
 
-export default interface ButtonAddUserProps {}
-
-export function ButtonAddUser(props: ButtonAddUserProps) {
+export function ButtonAddUser() {
 	return (
 		<Button
 			color="primary"
 			className={styles.buttonAddUser}
-			onClick={() => {
-				console.log('Agregando usuario');
-			}}
+			onClick={() =>
+				createUserRequest({
+					name: 'Victoria',
+					age: 27,
+					city: 'Buenos Aires',
+				})
+			}
 		>
 			Agregar Usuario
 		</Button>
