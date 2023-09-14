@@ -12,10 +12,11 @@ function Home() {
 	return (
 		<div>
 			<Card>
+				<p>Estos son los botones</p>
 				<ButtonPrimary />
 				<ButtonSecondary />
 			</Card>
-			<Card>
+			{/* <Card>
 				<FormCreateUser />
 			</Card>
 			<Card>
@@ -25,7 +26,7 @@ function Home() {
 				<Suspense fallback={<SkeletonTable />}>
 					<TableExample />
 				</Suspense>
-			</Card>
+			</Card> */}
 		</div>
 	);
 }
