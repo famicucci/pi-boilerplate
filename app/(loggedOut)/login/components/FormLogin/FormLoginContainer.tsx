@@ -25,9 +25,11 @@ export default function FormLoginContainer() {
 
 	const onSubmit = async (data: Login) => {
 		try {
-			const response = await callEndpoint(loginRequest(loginAdapter(data)));
-			dispatch(handleLogin(getLoginAdapter(response.data)));
-			router.push('/home');
+			console.log(data);
+			// const response = await callEndpoint(loginRequest(loginAdapter(data)));
+			// console.log(response);
+			// dispatch(handleLogin(getLoginAdapter(response.data)));
+			// router.push('/home');
 		} catch (error) {
 			console.log(error);
 		}

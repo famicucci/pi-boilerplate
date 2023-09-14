@@ -1,19 +1,17 @@
 import * as React from 'react';
 import styles from '../../styles/textField.module.css';
-import { useController } from 'react-hook-form';
-import { TextField } from '@/models';
+import { TextField } from '@/models/textField';
 
 export default function TextField({
-	control,
 	name,
 	placeholder,
 	type,
 	icon,
 	fullWidth,
+	error,
+	value,
+	onChange,
 }: TextField) {
-	const { field, fieldState } = useController({ control, name });
-	const { error } = fieldState;
-
 	return (
 		<div className={!fullWidth ? styles.container : styles.containerFullWidth}>
 			<div
@@ -22,7 +20,9 @@ export default function TextField({
 				}`}
 			>
 				<input
-					{...field}
+					name={name}
+					onChange={onChange}
+					value={value}
 					type={type}
 					placeholder={placeholder}
 					className={styles.input}
