@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import { SkeletonTable } from '@/components/Skeleton';
 import styles from './styles/page.module.css';
 import { ButtonAddUser } from './components/Buttons/ButtonAddUser';
+import { FormCreateUser } from './components/FormCreateUser';
 
 function Home() {
 	return (
@@ -13,6 +14,9 @@ function Home() {
 			<Card>
 				<ButtonPrimary />
 				<ButtonSecondary />
+			</Card>
+			<Card>
+				<FormCreateUser />
 			</Card>
 			<Card>
 				<div className={styles.buttonAddUserContainer}>
