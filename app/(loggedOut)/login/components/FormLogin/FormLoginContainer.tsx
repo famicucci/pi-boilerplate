@@ -27,9 +27,10 @@ export default function FormLoginContainer() {
 		try {
 			console.log(data);
 			// const response = await callEndpoint(loginRequest(loginAdapter(data)));
-			// console.log(response);
-			// dispatch(handleLogin(getLoginAdapter(response.data)));
-			// router.push('/home');
+			dispatch(handleLogin(getLoginAdapter({
+				accessToken: 'lksdj253034mdfs*/2ferkj654*/*/2342dsx',
+			})));
+			router.push('/home');
 		} catch (error) {
 			console.log(error);
 		}
