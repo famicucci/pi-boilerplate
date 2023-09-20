@@ -1,5 +1,12 @@
-.buttonAddUserContainer {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
 }

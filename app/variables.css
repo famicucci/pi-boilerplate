@@ -1,10 +1,12 @@
 :root {
-	--primary-color: #ffc000;
-	--primary-hover-color: #ff8c00;
-	--secondary-color: #00ff95;
-	--secondary-hover-color: #13c77c;
-	--danger-color: #ff3d00;
-	--regular-font-size: 0.84rem;
-	--base-spacing: 8px;
-	--regular-radius: 10px;
+  --primary-color: #ffc000;
+  --primary-hover-color: #ff8c00;
+  --secondary-color: #00ff95;
+  --secondary-hover-color: #13c77c;
+  --gray-color: #8a8a8a;
+  --white-color: #ffffff;
+  --danger-color: #ff3d00;
+  --regular-font-size: 0.84rem;
+  --base-spacing: 8px;
+  --regular-radius: 10px;
 }
