@@ -30,6 +30,10 @@ function Home() {
           <TableExample />
         </Suspense>
       </Card>
+      <Card>
+        <p>Esto es un card para mostrar el skeleton</p>
+        <SkeletonTable />
+      </Card>
     </div>
   );
 }
